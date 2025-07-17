@@ -1,0 +1,2 @@
+function e(e,n=500){let t;return function(...o){clearTimeout(t),t=setTimeout(()=>e.apply(this,o),n)}}function n(n,t,o={}){const{delay:r=500,eventType:l="input"}=o,u=document.querySelectorAll(n);if(0===u.length)return console.warn(`No elements found for selector: ${n}`),()=>{};const c=e(t,r),i=[];return u.forEach(e=>{e.addEventListener(l,c),i.push({el:e,handler:c})}),function(){i.forEach(({el:e,handler:n})=>{e.removeEventListener(l,n)})}}export{n as attachDebouncedInputListener,e as debounce};
+//# sourceMappingURL=index.js.map
